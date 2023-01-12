@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+  outline: none;
+  border: none;
+  list-style: none;
+}
+
+:root {
+  --black-color: #000;
+  --bg-color: #33d9b3;
+  --bg-container-color: #3e3e3e;
+  --title-color: #45d4ae;
+  --white-color: #fff;
+  --green-color: #27a844;
+  --grey-color: #6b757e;
+  --input-bg-color: #d9d9d9;
+}
+
+.total-container {
+    display: none;
+}
+.total-container.active {
+    display: block;
+}
+
+.calculated_container {
+    position: relative;
+    display: none;
+}
+
+input[type="submit"],
+#calc {
+    font-weight: 500;
+}
+
+
+.stud-name,
+.roll-num {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #27a844; */
+}
+.stud-name label,
+.per_input label,
+.roll-num label {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #666;
+}
+.stud-name input,
+.per_input input,
+.roll-num input {
+    width: 95%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    padding-left: 10px;
+    border-radius: 4px;
+}
+.name-cont label,
+.mark-cont label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #666;
+}
+.name-cont {
+    width: 45%;
+    margin-right: 10px;
+}
+.mark-cont {
+    width: 25%;
+    margin-right: 35px;
+} 
+
+.sub-name,
+.obt-mark {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.sub,
+.marks {
+    list-style: none;
+    font-size: 22px;
+    font-weight: 500;
+}
+.collection {
+    position: relative;
+}
+.delete-item {
+    position: absolute;
+    font-size: 22px;
+    top: 13px;
+    right: 10px;
+    color: blue;
+    z-index: 100;
+    cursor: pointer;
+}
+
+h3 span {
+    margin-left: 20px;
+}
