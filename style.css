@@ -19,93 +19,192 @@
   --input-bg-color: #d9d9d9;
 }
 
-.total-container {
+/* .average_grade_container {
     display: none;
+} */
+
+.total-container {
+  display: none;
 }
 .total-container.active {
-    display: block;
+  display: block;
 }
 
 .calculated_container {
-    position: relative;
-    display: none;
+  position: relative;
+  display: none;
 }
-
+/* button style */
 input[type="submit"],
 #calc {
-    font-weight: 500;
+  font-weight: 500;
 }
 
-
+/* student Id start */
 .stud-name,
 .roll-num {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* background-color: #27a844; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .stud-name label,
-.per_input label,
 .roll-num label {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #666;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #666;
 }
 .stud-name input,
-.per_input input,
 .roll-num input {
-    width: 95%;
-    height: 40px;
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: capitalize;
-    border: 1px solid #ccc;
-    margin-right: 10px;
-    padding-left: 10px;
-    border-radius: 4px;
+  width: 95%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  padding-left: 10px;
+  border-radius: 4px;
 }
+/* Student id end */
+
+/* form style start */
 .name-cont label,
-.mark-cont label {
-    font-size: 15px;
-    font-weight: 600;
-    color: #666;
+.subject-mark-cont label,
+.obt-mark-cont label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #666;
 }
 .name-cont {
-    width: 45%;
-    margin-right: 10px;
+  width: 45%;
+  margin-right: 10px;
 }
-.mark-cont {
-    width: 25%;
-    margin-right: 35px;
-} 
+.subject-mark-cont {
+  width: 25%;
+  margin: 10px;
+}
+
+.obt-mark-cont {
+  width: 25%;
+  margin-right: 35px;
+}
 
 .sub-name,
-.obt-mark {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: capitalize;
+.obt-mark,
+.subject-mark {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
 
 .sub,
 .marks {
-    list-style: none;
-    font-size: 22px;
-    font-weight: 500;
+  list-style: none;
+  font-size: 22px;
+  font-weight: 500;
 }
-.collection {
+/* .collection {
     position: relative;
-}
+} */
 .delete-item {
-    position: absolute;
-    font-size: 22px;
-    top: 13px;
-    right: 10px;
-    color: blue;
-    z-index: 100;
-    cursor: pointer;
+  position: absolute;
+  font-size: 22px;
+  top: 13px;
+  right: 10px;
+  color: blue;
+  z-index: 100;
+  cursor: pointer;
 }
 
 h3 span {
-    margin-left: 20px;
+  margin-left: 20px;
 }
+
+/* table style start */
+.table {
+    display: none;
+}
+
+.table.display {
+    display: block;
+}
+
+
+
+.collection {
+  border: 3px solid #ddd;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+}
+
+
+.head-fst-row th {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #ddd;
+  border-collapse: collapse;
+  background-color: #a9d08f;
+}
+.head-sec-row th {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  border: 3px solid #ddd;
+  border-collapse: collapse;
+  background-color: #c7dfb5;
+}
+.head-sec-row .subject {
+  width: 45%;
+}
+.head-sec-row .total-marks,
+.head-sec-row .obt-marks,
+.head-sec-row .status {
+  width: 18%;
+}
+
+/* table body style */
+/* .body-row {
+    border: 3px solid inherit;
+} */
+.dis-name {
+  text-transform: capitalize;
+}
+
+.body-row td {
+  font-size: 18px;
+  font-weight: 500;
+  border-width: 3px;
+  text-align: center;
+}
+.body-row:nth-of-type(odd) {
+  background-color: #e2efdb;
+}
+
+.body-row .subject-name {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.footer-row td {
+  font-size: 22px;
+  font-weight: 500;
+  border-width: 3px;
+  text-align: center;
+  border-top-width: 3px;
+}
+
+.result {
+  display: none;
+}
+
+.result.active {
+  display: contents;
+  transition: all 0.3s ease-in-out;
+}
+
+/* table style end */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Grade</title>
+    <title>Student Average grade Calculator</title>
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -28,7 +28,9 @@
   <body>
     <div class="container d-flex justify-content-center">
       <!-- displayed container  -->
-      <div class="average_grade_container shadow-lg p-5 mb-5 bg-white rounded w-50 border m-5 p-3">
+      <div
+        class="average_grade_container shadow-lg p-5 mb-5 bg-white rounded w-70 border m-5 p-3"
+      >
         <h1 class="heading pb-5 text-center text-success">
           Average Grade Calculator
         </h1>
@@ -40,10 +42,6 @@
           <div class="roll-num">
             <label for="roll-num">Roll Number</label>
             <input type="number" class="roll-num" id="roll-num" required />
-          </div>
-          <div class="per_input">
-            <label for="per_input">T-Marks</label>
-            <input type="number" class="per_input" id="per_input" required />
           </div>
         </div>
         <form class="my-5 form">
@@ -59,7 +57,17 @@
               />
               <label for="floatingInput">Subject name</label>
             </div>
-            <div class="form-floating mark-cont">
+            <div class="form-floating subject-mark-cont">
+              <input
+                type="number"
+                class="form-control subject-mark"
+                id="floatingInput"
+                placeholder="Subject Mark"
+                required
+              />
+              <label for="floatingInput">Subject mark</label>
+            </div>
+            <div class="form-floating obt-mark-cont">
               <input
                 type="number"
                 class="form-control obt-mark"
@@ -79,39 +87,50 @@
           </div>
         </form>
         <div class="card-action">
-          <ul class="collection list-group my-3">
-            <!-- <li class="list-group-item">
-                <ul class="group d-flex justify-content-around">
-                    <li class="group-list sub">English</li>
-                    <li class="group-list marks">75</li>
-                </ul>
-                <a href="#" class="delete-item"><i class="fa-solid fa-xmark icon"></i></a></li> -->
-          </ul>
+          <table class="w-100 my-3 table">
+            <thead class="head">
+              <tr class="head-fst-row">
+                <th scope="col">
+                  Full Name : <span class="dis-name px-3"></span>
+                </th>
+                <th scope="col" colspan="4">
+                  Roll Number : <span class="dis-rollno px-3"></span>
+                </th>
+              </tr>
+              <tr class="head-sec-row">
+                <th class="subject" scope="col">Subject</th>
+                <th class="total-marks" scope="col">Total Marks</th>
+                <th class="obt-marks" scope="col">Obt.Marks</th>
+                <th class="percentage" scope="col">Per%</th>
+                <th class="status" scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody class="collection table-body">
+              <!-- <tr class="body-row">
+                <td class="subject-name">English</td>
+                <td class="d-t-marks">100</td>
+                <td class="d-obt-marks">65</td>
+                <td class="d-percent">65%</td>
+                <td class="d-status">pass</td>
+              </tr> -->
+            </tbody>
+            <tfoot class="result">
+              <tr class="footer-row">
+                <td class="total">Total Marks :</td>
+                <td class="result-total-marks"></td>
+                <td class="result-total-obt"></td>
+                <td class="result-total-percent"></td>
+                <td class="result-status"></td>
+              </tr>
+            </tfoot>
+          </table>
           <button id="calc" class="btn btn-success w-100 btn-lg btn-block">
             Result Calculate
           </button>
 
           <button id="clear" class="btn btn-danger btn-lg my-3">
-            Clear Task
+            Clear Result
           </button>
-
-          <!-- result container -->
-          <div class="total-container text-center mt-5">
-            <h3 class="resltStudName mt-5">
-              Student Name: <span class="reslt_stud_name"></span>
-            </h3>
-            <h3 class="resltRollNum mt-5">
-              Roll Number: <span class="reslt_stud_roll"></span>
-            </h3>
-            <h3 class="total mt-5">
-              Total Marks: <span class="total_marks"></span>
-            </h3>
-            <h3 class="percentage">
-              Percentage: <span class="total_percentage"></span>
-            </h3>
-            <h3 class="grade">Grade: <span class="total_grade"></span></h3>
-            <h3 class="pass"></h3>
-          </div>
         </div>
       </div>
     </div>
@@ -127,6 +146,7 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom JavaScript file link -->
-    <script src="/script.js"></script>
+    <!-- <script src="/script.js"></script> -->
+    <script src="main.js"></script>
   </body>
 </html>
