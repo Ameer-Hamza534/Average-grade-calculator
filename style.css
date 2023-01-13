@@ -123,25 +123,27 @@ h3 span {
 
 /* table style start */
 .table {
-    display: none;
+  display: none;
 }
 
 .table.display {
-    display: block;
+  display: block;
 }
-
-
 
 .collection {
   border: 3px solid #ddd;
 }
 
-tbody, td, tfoot, th, thead, tr {
-    border-color: black;
-    border-style: solid;
-    border-width: 0;
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: black;
+  border-style: solid;
+  border-width: 0;
 }
-
 
 .head-fst-row th {
   font-size: 18px;
@@ -208,3 +210,28 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 /* table style end */
+
+/* responsive */
+@media screen and (max-width: 857px) {
+  .form-control-1 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .name-cont {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+  .subject-mark-cont,
+  .obt-mark-cont {
+    width: 47%;
+  }
+  .subject-mark-cont {
+    margin: 0 5px 0 0;
+  }
+  .obt-mark-cont {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
